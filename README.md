@@ -15,7 +15,7 @@
 
 <br>
 
-## Overview
+## 📖 Overview
 
 UDP is fast and simple, and it promises nothing. A packet can get lost, arrive with a flipped bit, arrive twice or show up out of order, and neither side is told. That is fine for a video call. It is useless for a file, where one wrong byte ruins the whole thing.
 
@@ -26,7 +26,7 @@ It was written originally as my Computer Networks Project so it uses only the Py
 
 To give a taste of the results: sending a 100 KB file over a link that loses 20% of its packets took 3.63 s with Stop-and-Wait, 1.32 s with Go-Back-N and 1.10 s with Selective Repeat. All 190 transfers in the experiments delivered a file identical to the original.
 
-## Getting started
+## 🚀 Getting started
 
 You need Python 3.8 or newer. Nothing has to be installed (matplotlib is only needed if you want to redraw the plots).
 
@@ -135,7 +135,7 @@ Probabilities must be at least 0 and below 1.
 
 </details>
 
-## How it works
+## 🔍 How it works
 
 ### The packet
 
@@ -235,7 +235,7 @@ On Linux you can also get real loss with `sudo tc qdisc add dev lo root netem lo
 
 The sender gives up, and says so, when `--max-retries` timeouts pass in a row without any progress (50 by default), so a receiver that has died cannot leave it hanging forever. The receiver aborts a transfer if the sender goes quiet for `--idle-timeout` seconds. It also keeps only the base name of the file from the START packet and never a path, so a sender cannot make it write outside its `--out-dir`; the tests try names such as `../../evil.txt` to make sure of that.
 
-## Results
+## 📊 Results
 
 All experiments send the same 100 KB file, split into 100 packets of 1000 bytes, over a link with a 5 ms one-way delay (RTT about 10 ms) and a retransmission timeout of 40 ms. Loss is applied independently to DATA packets and to ACKs. Each setting was run 5 times and averaged: 38 settings and 190 transfers in total, and every one delivered an intact file.
 
@@ -320,7 +320,7 @@ python experiments.py full --reps 5        # about 2 minutes
 
 This rewrites `results/results.csv` (every run), `results/summary.csv` (means and standard deviations) and the four figures. The transfers are timing-based, so your numbers will differ slightly from the ones above.
 
-## Screenshots
+## 📸 Screenshots
 
 Output from real runs on a Windows machine. Click any image to open it at full size.
 
@@ -361,7 +361,7 @@ Output from real runs on a Windows machine. Click any image to open it at full s
 
 In the sender logs, look for the `DROPPED`, `TIMEOUT` and `RESEND` lines to see the recovery at work. Every run ends with the receiver confirming that the SHA-256 of the file matches.
 
-## Project layout
+## 📁 Project layout
 
 ```
 reliable-udp-transfer/
@@ -378,7 +378,7 @@ reliable-udp-transfer/
 └── README.md
 ```
 
-## Tests
+## ⚙️ Tests
 
 ```bash
 python test_transfer.py -v
@@ -386,7 +386,7 @@ python test_transfer.py -v
 
 The suite takes about 20 seconds. For every protocol, the received file has to be identical to the original on a clean network, at 20% and at 40% loss, with 15% of the packets bit-flipped, with duplicates and re-ordering, and with all of those at once. The other tests cover file sizes of 0, 1, 999, 1000, 1001 and 5000 bytes, a window of 1 (which should behave like Stop-and-Wait), a window larger than the whole file, a sender that must give up when nobody is listening, a receiver that is sent hostile file names, and the packet codec itself (round trip, garbage rejected, every single-bit flip detected).
 
-## Troubleshooting
+## 🔧 Troubleshooting
 
 | symptom | what to do |
 |---|---|
@@ -396,11 +396,11 @@ The suite takes about 20 seconds. For every protocol, the received file has to b
 | Only one direction seems lossy | `--loss` and the other damage options apply to what *that program* sends, so give them to both. |
 | Odd timings on Windows | The system timer can be coarse (around 15 ms), which blurs the 5 ms delay. Try `python experiments.py demo --delay 0.02 --timeout 0.15`. |
 
-## Limitations
+## 🚧 Limitations
 
 The receiver serves one sender at a time and then waits for the next. The window size is fixed, with no congestion control or flow control. And there is no encryption or authentication: CRC-32 and SHA-256 catch accidental damage, not tampering.
 
-## References
+## 📚 References
 
 1. J. F. Kurose and K. W. Ross, *Computer Networking: A Top-Down Approach*, 8th ed. Pearson, 2021.
 2. A. S. Tanenbaum, N. Feamster and D. Wetherall, *Computer Networks*, 6th ed. Pearson, 2021.
