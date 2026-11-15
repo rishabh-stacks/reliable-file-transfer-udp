@@ -1,0 +1,42 @@
+Receiver listening on UDP port 9102, saving files to 'received_sr'. Ctrl+C to stop.
+[    435.3 ms] receiver START from 127.0.0.1:52612: 'sample.bin', 20000 bytes, 20 packets, Selective Repeat, window=4
+[    435.8 ms] receiver RECV   DATA seq=0  accepted -> send ACK 0
+[    435.9 ms] receiver RECV   DATA seq=2  accepted (buffered, waiting for 1) -> send ACK 2
+[    436.0 ms] receiver RECV   DATA seq=3  accepted (buffered, waiting for 1) -> send ACK 3
+[    436.0 ms] receiver RECV   DATA seq=4  accepted (buffered, waiting for 1) -> send ACK 4
+[    637.1 ms] receiver RECV   DATA seq=1  accepted -> send ACK 1
+[    637.5 ms] receiver RECV   DATA seq=5  accepted -> send ACK 5
+[    637.5 ms] receiver RECV   DATA seq=7  accepted (buffered, waiting for 6) -> send ACK 7
+[    637.6 ms] receiver RECV   DATA seq=8  accepted (buffered, waiting for 6) -> send ACK 8
+[    637.6 ms] receiver       ~~ network DROPPED ACK 8
+[    637.7 ms] receiver RECV   DATA seq=9  accepted (buffered, waiting for 6) -> send ACK 9
+[    738.4 ms] receiver RECV   DATA seq=6  accepted -> send ACK 6
+[    738.4 ms] receiver       ~~ network DROPPED ACK 6
+[    738.5 ms] receiver RECV   DATA seq=8  duplicate -> send ACK 8 again
+[    738.5 ms] receiver       ~~ network DROPPED ACK 8
+[    839.1 ms] receiver RECV   DATA seq=6  duplicate -> send ACK 6 again
+[    839.4 ms] receiver RECV   DATA seq=8  duplicate -> send ACK 8 again
+[    839.5 ms] receiver RECV   DATA seq=11  accepted (buffered, waiting for 10) -> send ACK 11
+[    839.6 ms] receiver RECV   DATA seq=12  accepted (buffered, waiting for 10) -> send ACK 12
+[    839.6 ms] receiver RECV   DATA seq=13  accepted (buffered, waiting for 10) -> send ACK 13
+[    940.6 ms] receiver RECV   DATA seq=10  accepted -> send ACK 10
+[    941.1 ms] receiver RECV   DATA seq=14  accepted -> send ACK 14
+[    941.3 ms] receiver RECV   DATA seq=15  accepted -> send ACK 15
+[    941.5 ms] receiver RECV   DATA seq=16  accepted -> send ACK 16
+[    941.5 ms] receiver RECV   DATA seq=19  accepted (buffered, waiting for 17) -> send ACK 19
+[    941.6 ms] receiver       ~~ network DROPPED ACK 19
+[   1042.7 ms] receiver RECV   DATA seq=17  accepted -> send ACK 17
+[   1043.0 ms] receiver RECV   DATA seq=18  accepted -> send ACK 18
+[   1043.0 ms] receiver       ~~ network DROPPED ACK 18
+[   1143.8 ms] receiver RECV   DATA seq=18  duplicate -> send ACK 18 again
+[   1245.0 ms] receiver RECV   DATA seq=19  duplicate -> send ACK 19 again
+[   1245.3 ms] receiver FIN received, file verified (SHA-256 matches)
+======================================================================
+ File received: sample.bin
+======================================================================
+ saved as          : received_sr/sample.bin  (20000 bytes)
+ protocol          : Selective Repeat, window N = 4
+ DATA arrivals     : 25 for 20 packets  (5 duplicates, 10 ahead of order)
+ ACKs sent         : 25  (network dropped 5 of the 27 packets this side sent)
+ corrupt discarded : 0
+ integrity         : OK - SHA-256 matches the sender's

@@ -1,0 +1,52 @@
+Receiver listening on UDP port 9101, saving files to 'received_gbn'. Ctrl+C to stop.
+[    414.9 ms] receiver START from 127.0.0.1:35806: 'sample.bin', 20000 bytes, 20 packets, Go-Back-N, window=4
+[    415.3 ms] receiver RECV   DATA seq=0  in order -> deliver, send ACK 1
+[    415.5 ms] receiver RECV   DATA seq=2  ahead (expected 1) -> discard, send ACK 1
+[    415.5 ms] receiver RECV   DATA seq=3  ahead (expected 1) -> discard, send ACK 1
+[    415.6 ms] receiver RECV   DATA seq=4  ahead (expected 1) -> discard, send ACK 1
+[    516.2 ms] receiver RECV   DATA seq=2  ahead (expected 1) -> discard, send ACK 1
+[    516.4 ms] receiver RECV   DATA seq=3  ahead (expected 1) -> discard, send ACK 1
+[    617.1 ms] receiver RECV   DATA seq=1  in order -> deliver, send ACK 2
+[    617.3 ms] receiver RECV   DATA seq=2  in order -> deliver, send ACK 3
+[    617.7 ms] receiver       ~~ network DROPPED ACK 3
+[    617.9 ms] receiver RECV   DATA seq=3  in order -> deliver, send ACK 4
+[    618.1 ms] receiver RECV   DATA seq=4  in order -> deliver, send ACK 5
+[    618.2 ms] receiver       ~~ network DROPPED ACK 5
+[    618.2 ms] receiver RECV   DATA seq=5  in order -> deliver, send ACK 6
+[    618.2 ms] receiver       ~~ network DROPPED ACK 6
+[    618.2 ms] receiver RECV   DATA seq=6  in order -> deliver, send ACK 7
+[    618.6 ms] receiver RECV   DATA seq=7  in order -> deliver, send ACK 8
+[    618.6 ms] receiver RECV   DATA seq=9  ahead (expected 8) -> discard, send ACK 8
+[    618.6 ms] receiver RECV   DATA seq=10  ahead (expected 8) -> discard, send ACK 8
+[    618.7 ms] receiver RECV   DATA seq=11  ahead (expected 8) -> discard, send ACK 8
+[    719.4 ms] receiver RECV   DATA seq=8  in order -> deliver, send ACK 9
+[    719.7 ms] receiver RECV   DATA seq=9  in order -> deliver, send ACK 10
+[    719.8 ms] receiver RECV   DATA seq=10  in order -> deliver, send ACK 11
+[    719.8 ms] receiver RECV   DATA seq=11  in order -> deliver, send ACK 12
+[    719.9 ms] receiver RECV   DATA seq=14  ahead (expected 12) -> discard, send ACK 12
+[    719.9 ms] receiver       ~~ network DROPPED ACK 12
+[    719.9 ms] receiver RECV   DATA seq=15  ahead (expected 12) -> discard, send ACK 12
+[    821.0 ms] receiver RECV   DATA seq=12  in order -> deliver, send ACK 13
+[    821.1 ms] receiver       ~~ network DROPPED ACK 13
+[    821.2 ms] receiver RECV   DATA seq=14  ahead (expected 13) -> discard, send ACK 13
+[    821.3 ms] receiver RECV   DATA seq=16  ahead (expected 13) -> discard, send ACK 13
+[    922.3 ms] receiver RECV   DATA seq=13  in order -> deliver, send ACK 14
+[    922.5 ms] receiver RECV   DATA seq=14  in order -> deliver, send ACK 15
+[    922.6 ms] receiver RECV   DATA seq=15  in order -> deliver, send ACK 16
+[    922.6 ms] receiver RECV   DATA seq=17  ahead (expected 16) -> discard, send ACK 16
+[    922.7 ms] receiver RECV   DATA seq=19  ahead (expected 16) -> discard, send ACK 16
+[   1023.5 ms] receiver RECV   DATA seq=16  in order -> deliver, send ACK 17
+[   1023.6 ms] receiver RECV   DATA seq=17  in order -> deliver, send ACK 18
+[   1023.7 ms] receiver RECV   DATA seq=18  in order -> deliver, send ACK 19
+[   1023.7 ms] receiver       ~~ network DROPPED ACK 19
+[   1023.7 ms] receiver RECV   DATA seq=19  in order -> deliver, send ACK 20
+[   1023.8 ms] receiver FIN received, file verified (SHA-256 matches)
+======================================================================
+ File received: sample.bin
+======================================================================
+ saved as          : received_gbn/sample.bin  (20000 bytes)
+ protocol          : Go-Back-N, window N = 4
+ DATA arrivals     : 34 for 20 packets  (0 duplicates, 14 ahead of order)
+ ACKs sent         : 34  (network dropped 6 of the 36 packets this side sent)
+ corrupt discarded : 0
+ integrity         : OK - SHA-256 matches the sender's

@@ -1,0 +1,42 @@
+Receiver listening on UDP port 9100, saving files to 'received_saw'. Ctrl+C to stop.
+[    442.4 ms] receiver START from 127.0.0.1:38134: 'sample.bin', 20000 bytes, 20 packets, Stop-and-Wait, window=1
+[    443.0 ms] receiver RECV   DATA seq=0  in order -> deliver, send ACK 1
+[    543.9 ms] receiver RECV   DATA seq=1  in order -> deliver, send ACK 2
+[    544.2 ms] receiver RECV   DATA seq=2  in order -> deliver, send ACK 3
+[    544.4 ms] receiver RECV   DATA seq=3  in order -> deliver, send ACK 4
+[    645.1 ms] receiver RECV   DATA seq=4  in order -> deliver, send ACK 5
+[    645.2 ms] receiver RECV   DATA seq=5  in order -> deliver, send ACK 6
+[    745.8 ms] receiver RECV   DATA seq=6  in order -> deliver, send ACK 7
+[    746.0 ms] receiver RECV   DATA seq=7  in order -> deliver, send ACK 8
+[    746.0 ms] receiver       ~~ network DROPPED ACK 8
+[    846.7 ms] receiver RECV   DATA seq=7  duplicate -> discard, send ACK 8
+[    846.9 ms] receiver RECV   DATA seq=8  in order -> deliver, send ACK 9
+[    847.0 ms] receiver       ~~ network DROPPED ACK 9
+[    947.6 ms] receiver RECV   DATA seq=8  duplicate -> discard, send ACK 9
+[    947.6 ms] receiver       ~~ network DROPPED ACK 9
+[   1048.2 ms] receiver RECV   DATA seq=8  duplicate -> discard, send ACK 9
+[   1048.3 ms] receiver RECV   DATA seq=9  in order -> deliver, send ACK 10
+[   1148.9 ms] receiver RECV   DATA seq=10  in order -> deliver, send ACK 11
+[   1149.0 ms] receiver RECV   DATA seq=11  in order -> deliver, send ACK 12
+[   1149.1 ms] receiver RECV   DATA seq=12  in order -> deliver, send ACK 13
+[   1149.2 ms] receiver RECV   DATA seq=13  in order -> deliver, send ACK 14
+[   1149.2 ms] receiver RECV   DATA seq=14  in order -> deliver, send ACK 15
+[   1149.3 ms] receiver RECV   DATA seq=15  in order -> deliver, send ACK 16
+[   1149.4 ms] receiver RECV   DATA seq=16  in order -> deliver, send ACK 17
+[   1350.5 ms] receiver RECV   DATA seq=17  in order -> deliver, send ACK 18
+[   1350.6 ms] receiver       ~~ network DROPPED ACK 18
+[   1451.2 ms] receiver RECV   DATA seq=17  duplicate -> discard, send ACK 18
+[   1451.4 ms] receiver RECV   DATA seq=18  in order -> deliver, send ACK 19
+[   1451.4 ms] receiver       ~~ network DROPPED ACK 19
+[   1652.3 ms] receiver RECV   DATA seq=18  duplicate -> discard, send ACK 19
+[   1753.2 ms] receiver RECV   DATA seq=19  in order -> deliver, send ACK 20
+[   1753.4 ms] receiver FIN received, file verified (SHA-256 matches)
+======================================================================
+ File received: sample.bin
+======================================================================
+ saved as          : received_saw/sample.bin  (20000 bytes)
+ protocol          : Stop-and-Wait
+ DATA arrivals     : 25 for 20 packets  (5 duplicates, 0 ahead of order)
+ ACKs sent         : 25  (network dropped 5 of the 27 packets this side sent)
+ corrupt discarded : 0
+ integrity         : OK - SHA-256 matches the sender's

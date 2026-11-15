@@ -1,0 +1,87 @@
+[     30.9 ms] sender   sending START to 127.0.0.1:9100  (Stop-and-Wait, window=1, 20000 bytes = 20 packets of up to 1024 B)
+[     31.7 ms] sender   receiver accepted the transfer
+[     31.8 ms] sender   SEND   DATA seq=0
+[     32.0 ms] sender   RECV   ACK 1  -> packet 0 delivered
+[     32.1 ms] sender   SEND   DATA seq=1
+[     32.1 ms] sender         ~~ network DROPPED DATA seq=1
+[    132.5 ms] sender   TIMEOUT no ACK for seq=1 -> resend it
+[    132.7 ms] sender   RESEND DATA seq=1
+[    133.1 ms] sender   RECV   ACK 2  -> packet 1 delivered
+[    133.1 ms] sender   SEND   DATA seq=2
+[    133.3 ms] sender   RECV   ACK 3  -> packet 2 delivered
+[    133.3 ms] sender   SEND   DATA seq=3
+[    133.4 ms] sender   RECV   ACK 4  -> packet 3 delivered
+[    133.4 ms] sender   SEND   DATA seq=4
+[    133.5 ms] sender         ~~ network DROPPED DATA seq=4
+[    233.8 ms] sender   TIMEOUT no ACK for seq=4 -> resend it
+[    233.9 ms] sender   RESEND DATA seq=4
+[    234.1 ms] sender   RECV   ACK 5  -> packet 4 delivered
+[    234.2 ms] sender   SEND   DATA seq=5
+[    234.2 ms] sender   RECV   ACK 6  -> packet 5 delivered
+[    234.2 ms] sender   SEND   DATA seq=6
+[    234.2 ms] sender         ~~ network DROPPED DATA seq=6
+[    334.5 ms] sender   TIMEOUT no ACK for seq=6 -> resend it
+[    334.6 ms] sender   RESEND DATA seq=6
+[    334.9 ms] sender   RECV   ACK 7  -> packet 6 delivered
+[    334.9 ms] sender   SEND   DATA seq=7
+[    435.4 ms] sender   TIMEOUT no ACK for seq=7 -> resend it
+[    435.5 ms] sender   RESEND DATA seq=7
+[    435.8 ms] sender   RECV   ACK 8  -> packet 7 delivered
+[    435.8 ms] sender   SEND   DATA seq=8
+[    536.3 ms] sender   TIMEOUT no ACK for seq=8 -> resend it
+[    536.4 ms] sender   RESEND DATA seq=8
+[    636.9 ms] sender   TIMEOUT no ACK for seq=8 -> resend it
+[    637.0 ms] sender   RESEND DATA seq=8
+[    637.2 ms] sender   RECV   ACK 9  -> packet 8 delivered
+[    637.3 ms] sender   SEND   DATA seq=9
+[    637.3 ms] sender   RECV   ACK 10  -> packet 9 delivered
+[    637.3 ms] sender   SEND   DATA seq=10
+[    637.4 ms] sender         ~~ network DROPPED DATA seq=10
+[    737.6 ms] sender   TIMEOUT no ACK for seq=10 -> resend it
+[    737.7 ms] sender   RESEND DATA seq=10
+[    738.0 ms] sender   RECV   ACK 11  -> packet 10 delivered
+[    738.0 ms] sender   SEND   DATA seq=11
+[    738.0 ms] sender   RECV   ACK 12  -> packet 11 delivered
+[    738.1 ms] sender   SEND   DATA seq=12
+[    738.1 ms] sender   RECV   ACK 13  -> packet 12 delivered
+[    738.1 ms] sender   SEND   DATA seq=13
+[    738.2 ms] sender   RECV   ACK 14  -> packet 13 delivered
+[    738.2 ms] sender   SEND   DATA seq=14
+[    738.3 ms] sender   RECV   ACK 15  -> packet 14 delivered
+[    738.3 ms] sender   SEND   DATA seq=15
+[    738.3 ms] sender   RECV   ACK 16  -> packet 15 delivered
+[    738.3 ms] sender   SEND   DATA seq=16
+[    738.4 ms] sender   RECV   ACK 17  -> packet 16 delivered
+[    738.4 ms] sender   SEND   DATA seq=17
+[    738.4 ms] sender         ~~ network DROPPED DATA seq=17
+[    838.8 ms] sender   TIMEOUT no ACK for seq=17 -> resend it
+[    838.9 ms] sender   RESEND DATA seq=17
+[    839.0 ms] sender         ~~ network DROPPED DATA seq=17
+[    939.2 ms] sender   TIMEOUT no ACK for seq=17 -> resend it
+[    939.3 ms] sender   RESEND DATA seq=17
+[   1039.8 ms] sender   TIMEOUT no ACK for seq=17 -> resend it
+[   1039.9 ms] sender   RESEND DATA seq=17
+[   1040.3 ms] sender   RECV   ACK 18  -> packet 17 delivered
+[   1040.3 ms] sender   SEND   DATA seq=18
+[   1140.7 ms] sender   TIMEOUT no ACK for seq=18 -> resend it
+[   1140.8 ms] sender   RESEND DATA seq=18
+[   1140.8 ms] sender         ~~ network DROPPED DATA seq=18
+[   1241.0 ms] sender   TIMEOUT no ACK for seq=18 -> resend it
+[   1241.1 ms] sender   RESEND DATA seq=18
+[   1241.4 ms] sender   RECV   ACK 19  -> packet 18 delivered
+[   1241.4 ms] sender   SEND   DATA seq=19
+[   1241.4 ms] sender         ~~ network DROPPED DATA seq=19
+[   1341.8 ms] sender   TIMEOUT no ACK for seq=19 -> resend it
+[   1341.9 ms] sender   RESEND DATA seq=19
+[   1342.2 ms] sender   RECV   ACK 20  -> packet 19 delivered
+======================================================================
+ Transfer finished: sample.bin
+======================================================================
+ protocol          : Stop-and-Wait
+ file              : 20000 bytes in 20 packets
+ transfer time     : 1.310 s   (15.3 KB/s)
+ DATA packets      : 33 sent = 20 first transmissions + 13 retransmissions
+ timeouts          : 13
+ ACKs received     : 20  (corrupt packets discarded: 0)
+ simulated network : of 35 packets sent, 8 dropped, 0 corrupted, 0 duplicated
+ integrity         : OK - receiver confirms the SHA-256 of the file matches

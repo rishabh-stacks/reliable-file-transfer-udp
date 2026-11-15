@@ -1,0 +1,87 @@
+[     27.3 ms] sender   sending START to 127.0.0.1:9102  (Selective Repeat, window=4, 20000 bytes = 20 packets of up to 1024 B)
+[     27.9 ms] sender   receiver accepted the transfer
+[     27.9 ms] sender   SEND   DATA seq=0
+[     28.0 ms] sender   SEND   DATA seq=1
+[     28.0 ms] sender         ~~ network DROPPED DATA seq=1
+[     28.0 ms] sender   SEND   DATA seq=2
+[     28.1 ms] sender   SEND   DATA seq=3
+[     28.2 ms] sender   RECV   ACK 0  -> window base is now 1
+[     28.2 ms] sender   SEND   DATA seq=4
+[     28.3 ms] sender   RECV   ACK 2  -> window base is now 1
+[     28.4 ms] sender   RECV   ACK 3  -> window base is now 1
+[     28.4 ms] sender   RECV   ACK 4  -> window base is now 1
+[    128.7 ms] sender   TIMEOUT seq=1: resend only this packet
+[    128.8 ms] sender   RESEND DATA seq=1
+[    128.9 ms] sender         ~~ network DROPPED DATA seq=1
+[    229.2 ms] sender   TIMEOUT seq=1: resend only this packet
+[    229.3 ms] sender   RESEND DATA seq=1
+[    229.6 ms] sender   RECV   ACK 1  -> window base is now 5
+[    229.7 ms] sender   SEND   DATA seq=5
+[    229.7 ms] sender   SEND   DATA seq=6
+[    229.7 ms] sender         ~~ network DROPPED DATA seq=6
+[    229.7 ms] sender   SEND   DATA seq=7
+[    229.7 ms] sender   SEND   DATA seq=8
+[    229.8 ms] sender   RECV   ACK 5  -> window base is now 6
+[    229.9 ms] sender   SEND   DATA seq=9
+[    229.9 ms] sender   RECV   ACK 7  -> window base is now 6
+[    230.1 ms] sender   RECV   ACK 9  -> window base is now 6
+[    330.4 ms] sender   TIMEOUT seq=6: resend only this packet
+[    330.5 ms] sender   RESEND DATA seq=6
+[    330.6 ms] sender   TIMEOUT seq=8: resend only this packet
+[    330.6 ms] sender   RESEND DATA seq=8
+[    431.0 ms] sender   TIMEOUT seq=6: resend only this packet
+[    431.2 ms] sender   RESEND DATA seq=6
+[    431.3 ms] sender   TIMEOUT seq=8: resend only this packet
+[    431.3 ms] sender   RESEND DATA seq=8
+[    431.6 ms] sender   RECV   ACK 6  -> window base is now 8
+[    431.6 ms] sender   SEND   DATA seq=10
+[    431.7 ms] sender         ~~ network DROPPED DATA seq=10
+[    431.7 ms] sender   SEND   DATA seq=11
+[    431.9 ms] sender   RECV   ACK 8  -> window base is now 10
+[    431.9 ms] sender   SEND   DATA seq=12
+[    431.9 ms] sender   SEND   DATA seq=13
+[    432.0 ms] sender   RECV   ACK 11  -> window base is now 10
+[    432.0 ms] sender   RECV   ACK 12  -> window base is now 10
+[    432.0 ms] sender   RECV   ACK 13  -> window base is now 10
+[    532.5 ms] sender   TIMEOUT seq=10: resend only this packet
+[    532.7 ms] sender   RESEND DATA seq=10
+[    533.1 ms] sender   RECV   ACK 10  -> window base is now 14
+[    533.2 ms] sender   SEND   DATA seq=14
+[    533.2 ms] sender   SEND   DATA seq=15
+[    533.3 ms] sender   SEND   DATA seq=16
+[    533.3 ms] sender   SEND   DATA seq=17
+[    533.3 ms] sender         ~~ network DROPPED DATA seq=17
+[    533.5 ms] sender   RECV   ACK 14  -> window base is now 15
+[    533.6 ms] sender   SEND   DATA seq=18
+[    533.6 ms] sender         ~~ network DROPPED DATA seq=18
+[    533.7 ms] sender   RECV   ACK 15  -> window base is now 16
+[    533.8 ms] sender   SEND   DATA seq=19
+[    534.0 ms] sender   RECV   ACK 16  -> window base is now 17
+[    634.4 ms] sender   TIMEOUT seq=17: resend only this packet
+[    634.6 ms] sender   RESEND DATA seq=17
+[    634.8 ms] sender   TIMEOUT seq=18: resend only this packet
+[    634.8 ms] sender   RESEND DATA seq=18
+[    634.8 ms] sender   TIMEOUT seq=19: resend only this packet
+[    634.9 ms] sender   RESEND DATA seq=19
+[    634.9 ms] sender         ~~ network DROPPED DATA seq=19
+[    635.2 ms] sender   RECV   ACK 17  -> window base is now 18
+[    735.7 ms] sender   TIMEOUT seq=18: resend only this packet
+[    735.9 ms] sender   RESEND DATA seq=18
+[    736.0 ms] sender   TIMEOUT seq=19: resend only this packet
+[    736.0 ms] sender   RESEND DATA seq=19
+[    736.1 ms] sender         ~~ network DROPPED DATA seq=19
+[    736.3 ms] sender   RECV   ACK 18  -> window base is now 19
+[    837.0 ms] sender   TIMEOUT seq=19: resend only this packet
+[    837.2 ms] sender   RESEND DATA seq=19
+[    837.5 ms] sender   RECV   ACK 19  -> window base is now 20
+======================================================================
+ Transfer finished: sample.bin
+======================================================================
+ protocol          : Selective Repeat, window N = 4
+ file              : 20000 bytes in 20 packets
+ transfer time     : 0.810 s   (24.7 KB/s)
+ DATA packets      : 33 sent = 20 first transmissions + 13 retransmissions
+ timeouts          : 13
+ ACKs received     : 20  (corrupt packets discarded: 0)
+ simulated network : of 35 packets sent, 8 dropped, 0 corrupted, 0 duplicated
+ integrity         : OK - receiver confirms the SHA-256 of the file matches

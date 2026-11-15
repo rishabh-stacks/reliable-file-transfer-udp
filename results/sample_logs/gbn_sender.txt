@@ -1,0 +1,101 @@
+[     20.8 ms] sender   sending START to 127.0.0.1:9101  (Go-Back-N, window=4, 20000 bytes = 20 packets of up to 1024 B)
+[     21.4 ms] sender   receiver accepted the transfer
+[     21.4 ms] sender   SEND   DATA seq=0
+[     21.4 ms] sender   SEND   DATA seq=1
+[     21.5 ms] sender         ~~ network DROPPED DATA seq=1
+[     21.5 ms] sender   SEND   DATA seq=2
+[     21.5 ms] sender   SEND   DATA seq=3
+[     21.7 ms] sender   RECV   ACK 1  -> window base 0 -> 1
+[     21.7 ms] sender   SEND   DATA seq=4
+[     21.7 ms] sender   RECV   ACK 1  (duplicate, ignored)
+[     21.8 ms] sender   RECV   ACK 1  (duplicate, ignored)
+[     21.9 ms] sender   RECV   ACK 1  (duplicate, ignored)
+[    122.2 ms] sender   TIMEOUT base=1: go back and resend 1..4
+[    122.3 ms] sender   RESEND DATA seq=1
+[    122.3 ms] sender         ~~ network DROPPED DATA seq=1
+[    122.3 ms] sender   RESEND DATA seq=2
+[    122.5 ms] sender   RESEND DATA seq=3
+[    122.6 ms] sender   RESEND DATA seq=4
+[    122.6 ms] sender         ~~ network DROPPED DATA seq=4
+[    122.7 ms] sender   RECV   ACK 1  (duplicate, ignored)
+[    122.7 ms] sender   RECV   ACK 1  (duplicate, ignored)
+[    223.0 ms] sender   TIMEOUT base=1: go back and resend 1..4
+[    223.2 ms] sender   RESEND DATA seq=1
+[    223.4 ms] sender   RESEND DATA seq=2
+[    223.4 ms] sender   RESEND DATA seq=3
+[    223.5 ms] sender   RESEND DATA seq=4
+[    223.5 ms] sender   RECV   ACK 2  -> window base 1 -> 2
+[    223.5 ms] sender   SEND   DATA seq=5
+[    224.2 ms] sender   RECV   ACK 4  -> window base 2 -> 4
+[    224.3 ms] sender   SEND   DATA seq=6
+[    224.3 ms] sender   SEND   DATA seq=7
+[    224.5 ms] sender   RECV   ACK 7  -> window base 4 -> 7
+[    224.5 ms] sender   SEND   DATA seq=8
+[    224.5 ms] sender         ~~ network DROPPED DATA seq=8
+[    224.6 ms] sender   SEND   DATA seq=9
+[    224.7 ms] sender   SEND   DATA seq=10
+[    224.9 ms] sender   RECV   ACK 8  -> window base 7 -> 8
+[    224.9 ms] sender   SEND   DATA seq=11
+[    225.0 ms] sender   RECV   ACK 8  (duplicate, ignored)
+[    225.0 ms] sender   RECV   ACK 8  (duplicate, ignored)
+[    225.0 ms] sender   RECV   ACK 8  (duplicate, ignored)
+[    325.3 ms] sender   TIMEOUT base=8: go back and resend 8..11
+[    325.4 ms] sender   RESEND DATA seq=8
+[    325.8 ms] sender   RESEND DATA seq=9
+[    325.8 ms] sender   RESEND DATA seq=10
+[    325.8 ms] sender   RESEND DATA seq=11
+[    325.9 ms] sender   RECV   ACK 9  -> window base 8 -> 9
+[    325.9 ms] sender   SEND   DATA seq=12
+[    325.9 ms] sender         ~~ network DROPPED DATA seq=12
+[    326.0 ms] sender   RECV   ACK 10  -> window base 9 -> 10
+[    326.0 ms] sender   SEND   DATA seq=13
+[    326.0 ms] sender         ~~ network DROPPED DATA seq=13
+[    326.0 ms] sender   RECV   ACK 11  -> window base 10 -> 11
+[    326.0 ms] sender   SEND   DATA seq=14
+[    326.1 ms] sender   RECV   ACK 12  -> window base 11 -> 12
+[    326.1 ms] sender   SEND   DATA seq=15
+[    326.2 ms] sender   RECV   ACK 12  (duplicate, ignored)
+[    426.7 ms] sender   TIMEOUT base=12: go back and resend 12..15
+[    426.8 ms] sender   RESEND DATA seq=12
+[    427.0 ms] sender   RESEND DATA seq=13
+[    427.0 ms] sender         ~~ network DROPPED DATA seq=13
+[    427.0 ms] sender   RESEND DATA seq=14
+[    427.1 ms] sender   RESEND DATA seq=15
+[    427.1 ms] sender         ~~ network DROPPED DATA seq=15
+[    427.5 ms] sender   RECV   ACK 13  -> window base 12 -> 13
+[    427.5 ms] sender   SEND   DATA seq=16
+[    427.6 ms] sender   RECV   ACK 13  (duplicate, ignored)
+[    528.0 ms] sender   TIMEOUT base=13: go back and resend 13..16
+[    528.1 ms] sender   RESEND DATA seq=13
+[    528.3 ms] sender   RESEND DATA seq=14
+[    528.3 ms] sender   RESEND DATA seq=15
+[    528.3 ms] sender   RESEND DATA seq=16
+[    528.4 ms] sender         ~~ network DROPPED DATA seq=16
+[    528.7 ms] sender   RECV   ACK 14  -> window base 13 -> 14
+[    528.7 ms] sender   SEND   DATA seq=17
+[    528.9 ms] sender   RECV   ACK 15  -> window base 14 -> 15
+[    528.9 ms] sender   SEND   DATA seq=18
+[    528.9 ms] sender         ~~ network DROPPED DATA seq=18
+[    528.9 ms] sender   RECV   ACK 16  -> window base 15 -> 16
+[    528.9 ms] sender   SEND   DATA seq=19
+[    529.0 ms] sender   RECV   ACK 16  (duplicate, ignored)
+[    529.0 ms] sender   RECV   ACK 16  (duplicate, ignored)
+[    629.3 ms] sender   TIMEOUT base=16: go back and resend 16..19
+[    629.5 ms] sender   RESEND DATA seq=16
+[    629.6 ms] sender   RESEND DATA seq=17
+[    629.6 ms] sender   RESEND DATA seq=18
+[    629.6 ms] sender   RESEND DATA seq=19
+[    629.8 ms] sender   RECV   ACK 17  -> window base 16 -> 17
+[    629.9 ms] sender   RECV   ACK 18  -> window base 17 -> 18
+[    630.0 ms] sender   RECV   ACK 20  -> window base 18 -> 20
+======================================================================
+ Transfer finished: sample.bin
+======================================================================
+ protocol          : Go-Back-N, window N = 4
+ file              : 20000 bytes in 20 packets
+ transfer time     : 0.609 s   (32.9 KB/s)
+ DATA packets      : 44 sent = 20 first transmissions + 24 retransmissions
+ timeouts          : 6
+ ACKs received     : 28  (corrupt packets discarded: 0)
+ simulated network : of 46 packets sent, 10 dropped, 0 corrupted, 0 duplicated
+ integrity         : OK - receiver confirms the SHA-256 of the file matches
