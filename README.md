@@ -21,7 +21,8 @@ UDP is fast and simple, and it promises nothing. A packet can get lost, arrive w
 
 TCP hides all of this from us. I wanted to see what is underneath, so I rebuilt the same machinery by hand on top of plain UDP sockets: sequence numbers, acknowledgements, timers, retransmission, a sliding window and checksums. Three classic protocols are implemented, **Stop-and-Wait**, **Go-Back-N** and **Selective Repeat**, and all three are tested on the same simulated bad network so they can be compared fairly.
 
-The repository holds a sender and a receiver you can run in two terminals, a small network simulator that drops, corrupts, duplicates and delays packets on purpose, a test suite, and the scripts that produced the measurements further down. It was written for the CSN 303 (Computer Networks) course and uses only the Python standard library.
+The repository holds a sender and a receiver you can run in two terminals, a small network simulator that drops, corrupts, duplicates and delays packets on purpose, a test suite, and the scripts that produced the measurements further down. 
+It was written originally as my Computer Networks Project so it uses only the Python standard library.
 
 To give a taste of the results: sending a 100 KB file over a link that loses 20% of its packets took 3.63 s with Stop-and-Wait, 1.32 s with Go-Back-N and 1.10 s with Selective Repeat. All 190 transfers in the experiments delivered a file identical to the original.
 
