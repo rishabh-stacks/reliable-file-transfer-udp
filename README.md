@@ -10,7 +10,7 @@ UDP promises nothing: packets can vanish, arrive damaged, arrive twice or arrive
 
 **Stop-and-Wait**, **Go-Back-N** and **Selective Repeat**.
 
-Built as a course project for CSN 303 (Computer Networks). Python standard library only.
+
 
 ### Results at a glance
 
@@ -36,7 +36,7 @@ All 190 experiment transfers delivered an intact file. [Full results below.](#re
 - [Tests](#tests)
 - [Troubleshooting](#troubleshooting)
 - [Limitations](#limitations)
-- [References](#references) and [License](#license)
+- [References](#references) 
 
 ## Features
 
@@ -395,7 +395,6 @@ reliable-udp-transfer/
 ├── results/           results.csv (all 190 runs), summary.csv, fig1 to fig4 (.png), sample_logs/
 ├── docs/screenshots/  terminal screenshots of the test run, the demo and the real runs
 ├── requirements.txt   matplotlib (only needed for plots)
-├── LICENSE
 └── README.md
 ```
 
@@ -442,7 +441,3 @@ Three more tests cover the codec (round trip, every single-bit flip detected, ga
 1. J. F. Kurose and K. W. Ross, *Computer Networking: A Top-Down Approach*, 8th ed. Pearson, 2021.
 2. A. S. Tanenbaum, N. Feamster and D. Wetherall, *Computer Networks*, 6th ed. Pearson, 2021.
 3. J. Postel, "User Datagram Protocol," RFC 768, IETF, Aug. 1980. <https://www.rfc-editor.org/info/rfc768>
-
-## License
-
-MIT, see [LICENSE](LICENSE).
