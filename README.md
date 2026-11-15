@@ -409,6 +409,6 @@ The receiver serves one sender at a time and then waits for the next. The window
 
 <div align="center">
 
-Made by Rishabh Mishra for CSN 303 &nbsp;·&nbsp; Released under the [MIT License](LICENSE)
+Made by Rishabh Mishra &nbsp;·&nbsp; Released under the [MIT License](LICENSE)
 
 </div>
